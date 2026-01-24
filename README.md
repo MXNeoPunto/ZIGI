@@ -6,6 +6,9 @@ Plugin URI: https://neopunto.com
 Author URI: https://neopunto.com
 Tags: ZIGI, pagos QR, WooCommerce, pago móvil, Guatemala
 
+https://neopunto.com/guia-de-como-cobrar-con-zigi-mediante-codigo-qr-en-wordpress-gratis/
+
+
 Requires at least: 5.2
 Tested up to: 6.6
 WC tested up to: 9.3
