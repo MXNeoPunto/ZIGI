@@ -1,56 +1,73 @@
 # Paga con ZIGI
-
-Contributors: Andres Turcios
 Plugin Name: Paga con ZIGI
-Description: Método de pago para WooCommerce que permite realizar pagos escaneando un código QR con la app ZIGI.
-Tags: ZIGI, Pago QR, WooCommerce QR, QR WooCommerce
+Contributors: Andres Turcios
+Author: Andrés Turcios
+Plugin URI: https://neopunto.com
+Author URI: https://neopunto.com
+Tags: ZIGI, pagos QR, WooCommerce, pago móvil, Guatemala
+
 Requires at least: 5.2
 Tested up to: 6.6
 WC tested up to: 9.3
 Requires PHP: 7.4
 Stable tag: 2.0.0
-Author: Andrés Turcios
-Plugin URI: https://neopunto.com
-Author URI: https://neopunto.com
-Text Domain: paga-con-zigi
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: paga-con-zigi
 
-Permite realizar pagos utilizando código QR con la app ZIGI
+Descripción
+Paga con ZIGI es un método de pago para WooCommerce que permite a los clientes realizar pagos mediante código QR, utilizando la aplicación ZIGI en Guatemala.
 
-== Description ==
+El plugin funciona de forma similar a una transferencia bancaria: el cliente escanea el código QR, realiza el pago desde la app ZIGI y adjunta el comprobante directamente en su pedido.
+Ideal para comercios que desean aceptar pagos digitales sin comisiones elevadas ni integraciones complejas.
+Características
+Método de pago tipo transferencia bancaria.
 
-Un método de pago simple que permite adjuntar comprobantes de pago realizados vía QR ZIGI.
+Compatible con WooCommerce.
+Escaneo de código QR desde la app ZIGI.
+Posibilidad de adjuntar comprobante de pago en la orden.
+El comprobante es visible para:
+El cliente
+El administrador de la tienda
+Mensajes totalmente personalizables desde el panel.
+Configuración de monto mínimo y máximo.
+Opción para agregar número de teléfono afiliado.
+Selección y vista previa del código QR.
+Opción para configurar el icono del método de pago.
+Flujo simple y claro para el usuario final.
 
-### Características
+Instalación
+Descarga o clona el repositorio.
+Sube la carpeta del plugin a:
+Copiar código
 
-* Método de pago similar a transferencia bancaria.
-* Permite configurar el icono de la aplicación.
-* Permite adjuntar el comprobante de pago junto con la orden de compra.
-* Este método aparece en la orden del cliente y del comercio.
-* Todos los mensajes son administrables.
-* Permite definir un monto límite de pago.
-* Permite agregar un número de teléfono afiliado.
-* Permite seleccionar el Código QR.
-* Vista previa del código QR.
+/wp-content/plugins/
 
-== Installation ==
+Activa el plugin desde Plugins > Plugins instalados.
 
-1. Sube la carpeta del plugin al directorio `/wp-content/plugins/`.
-2. Activa el plugin desde el menú 'Plugins' en WordPress.
-3. Configura las opciones en WooCommerce > Ajustes > Pagos > Paga con ZIGI.
+Ve a WooCommerce > Ajustes > Pagos.
+Activa y configura Paga con ZIGI.
+Uso
+El cliente selecciona Paga con ZIGI al finalizar la compra.
 
-== Screenshots ==
+Escanea el código QR mostrado.
+Realiza el pago desde la app ZIGI.
+Adjunta el comprobante de pago.
+El administrador revisa el comprobante y valida la orden.
 
-1. Configuración simple.
-2. Método configurado visible.
-3. Modal con monto a pagar.
-4. Adjuntar recibo.
-5. Método de pago seleccionado en la orden.
-6. Administrador revisa el recibo para validación.
-
-== Changelog ==
-
-= 2.0.0 =
-
-* Versión inicial para ZIGI.
+Screenshots
+Configuración del método de pago.
+Método de pago visible en el checkout.
+Modal con monto a pagar.
+Adjuntar comprobante de pago.
+Método de pago reflejado en la orden.
+Panel del administrador revisando el comprosoporte
+Changelog
+2.0.0
+Versión inicial del plugin Paga con ZIGI.
+Integración básica con WooCommerce.
+Soporte para pagos mediante QR ZIGI.
+Soporte
+Para soporte, sugerencias o mejoras:
+📧 clientes@neopunto.com
+🌐 https://neopunto.com
