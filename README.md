@@ -11,9 +11,9 @@ https://neopunto.com/guia-de-como-cobrar-con-zigi-mediante-codigo-qr-en-wordpres
 
 Requires at least: 5.2
 Tested up to: 6.6
-WC tested up to: 9.3
+WC tested up to: 10.5
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: paga-con-zigi

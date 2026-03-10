@@ -10,13 +10,13 @@ if (! defined('ABSPATH')) {
  * Requires at least: 5.2
  * Tested up to: 6.6
  * Requires PHP: 7.4
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author: Andrés Turcios
  * Plugin URI: https://neopunto.com
  * Author URI: https://neopunto.com
  * Text Domain: paga-con-zigi
  * Requires Plugins: woocommerce
- * WC tested up to: 9.3
+ * WC tested up to: 10.5
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
