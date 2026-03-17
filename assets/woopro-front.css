@@ -23,9 +23,9 @@
 }
 .popup-wrapper > div {
     background-color: #ffffff;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255,255,255,0.2);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     display: inline-block;
     height: auto;
     max-width: 450px;
@@ -33,8 +33,8 @@
     vertical-align: middle;
     width: 90%;
     position: relative;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 28px;
+    padding: 24px;
 }
 .popup-wrapper .first-step img {
     margin-bottom: 20px;
@@ -44,36 +44,46 @@
 }
 .popup-wrapper .first-step p {
     font-size: 15px;
+    color: #475569;
 }
 .popup-wrapper .first-step .price {
     font-size: 22px;
     font-weight: 600;
     display: block;
     margin: 15px 0;
-    color: #1a1a1a;
+    color: #0f172a;
     line-height: 40px;
 }
 .popup-wrapper .first-step .amount{
     font-size: 40px;
     display: block;
+    color: #0f172a;
 }
 .popup-wrapper .error{
     width: 100%;
     padding: 7px;
-    border: 1px solid #ff0000;
-    color: #ff0000;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    color: #ef4444;
     font-size: 14px;
     margin-bottom: 15px;
     display: none;
+}
+
+/* Submit button & loader wrapper */
+.submit-wrapper {
+    position: relative;
+    width: 100%;
 }
 .popup-wrapper .loader{
     display: none;
     width: 25px;
     height: auto;
-    margin: 0 auto;
     position: absolute;
-    right: 60px;
-    bottom: 23px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Let clicks pass through */
 }
 .popupCloseButton {
     position: absolute;
@@ -82,9 +92,9 @@
     width: 32px;
     height: 32px;
     border: none;
-    background: #f0f0f0;
+    background: #f1f5f9;
     border-radius: 50%;
-    color: #333;
+    color: #334155;
     font-size: 20px;
     line-height: 32px;
     display: flex;
@@ -94,48 +104,54 @@
     transition: background 0.2s;
 }
 .popupCloseButton:hover {
-    background: #e0e0e0;
+    background: #e2e8f0;
 }
 .popup-wrapper .btn_submit {
-    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
     color: #fff;
     border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     font-weight: 600;
-    padding: 14px;
-    box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3);
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
     width: 100%;
     text-transform: uppercase;
     cursor: pointer;
+    font-size: 16px;
 }
 .popup-wrapper .btn_submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(58, 123, 213, 0.4);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+.popup-wrapper .btn_submit:active {
+    transform: translateY(0);
 }
 
 /* Popup box BEGIN */
 
 .box{
-    border: 2px dashed #3a7bd5;
-    border-radius: 16px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
     background: #f8fafc;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
-    font-size: 1.25rem; /* 20 */
+    font-size: 1.1rem; /* 17.6px */
     position: relative;
     margin-bottom: 15px;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 .box.has-advanced-upload{
-    outline: 2px dashed #90EE90; /* Verde clarito */
+    outline: 2px dashed #3b82f6; /* Modern blue */
     outline-offset: -10px;
     -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
     transition: outline-offset .15s ease-in-out, background-color .15s linear;
 }
 .box.is-dragover{
     outline-offset: -20px;
-    outline-color: #c8dadf;
-    background-color: #fff;
+    outline-color: #3b82f6;
+    background-color: #eff6ff;
+    border-color: #3b82f6;
 }
 .box__dragndrop,
 .box__icon {
@@ -146,10 +162,10 @@
 }
 .box.has-advanced-upload .box__icon {
     width: 100%;
-    height: 80px;
-    fill: #90EE90; /* Verde clarito */
+    height: 50px;
+    fill: #3b82f6; /* Modern blue */
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .box.is-uploading .box__input,
@@ -159,8 +175,12 @@
 }
 
 .box__input label{
-    color: gray;
-    font-size: 20px;
+    color: #475569;
+    font-size: 18px;
+}
+.box__input label strong {
+    color: #0f172a;
+    font-weight: 600;
 }
 
 .box__uploading,
@@ -205,7 +225,7 @@
 }
 .box__restart:focus,
 .box__restart:hover {
-    color: #90EE90; /* Verde clarito */
+    color: #3b82f6;
 }
 
 .box .box__file {
@@ -227,15 +247,12 @@
 .box .box__file + label:hover strong,
 .box__file:focus + label strong,
 .box__file.has-focus + label strong {
-    color: #90EE90; /* Verde clarito */
+    color: #3b82f6;
 }
 .box .box__file:focus + label,
 .box .box__file.has-focus + label {
     outline: 1px dotted #000;
     outline: -webkit-focus-ring-color auto 5px;
-}
-.box .box__file + label * {
-    /* pointer-events: none; */ /* in case of FastClick lib use */
 }
 
 .no-js .box__file + label {
@@ -247,20 +264,24 @@
 }
 .box__button {
     background-color: transparent !important;
-    color: #2E8B57 !important; /* Verde oscuro */
-    border: 1px solid #90EE90; /* Verde clarito */
+    color: #3b82f6 !important;
+    border: 1px solid #3b82f6;
     font-size: 14px;
+    font-weight: 500;
     padding: 15px;
     text-decoration: none;
     text-transform: capitalize;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 8px 16px;
-    margin: 25px auto 0;
+    margin: 20px auto 0;
     display: block;
+    transition: background-color 0.2s, color 0.2s;
 }
 .box__button:hover,
 .box__button:focus {
     text-decoration: none;
+    background-color: #3b82f6 !important;
+    color: #fff !important;
 }
 
 .second-step, .popup-price-wrapper {
@@ -269,29 +290,42 @@
 
 .popup-wrapper .first-step .telephone-number {
     display: block;
-    color: #000;
+    color: #0f172a;
     font-size: 18px;
 }
 
 .popup-wrapper .first-step .telephone-number a{
     display: block;
-    border-radius: 8px;
-    border: dashed 1px #90EE90; /* Verde clarito */
-    background: #f0fff0; /* Verde muy pálido */
-    font-weight: bold;
-    padding: 10px;
+    border-radius: 12px;
+    border: dashed 2px #cbd5e1;
+    background: #f8fafc;
+    font-weight: 600;
+    padding: 12px;
     outline: none !important;
     text-decoration: none;
-    color: #2E8B57; /* Verde oscuro para texto */
+    color: #3b82f6;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.popup-wrapper .first-step .telephone-number a:hover {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
 }
 
 .popup-wrapper .first-step .message-limit-amount {
-    color: #e2401c;
+    color: #ef4444;
     display: none;
 }
 
-@media screen and (max-width: 480px) {
+.zigi-footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 481px) {
     .popup-wrapper > div{
-        width: 86%;
+        padding: 32px;
     }
 }
