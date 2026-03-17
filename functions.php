@@ -49,19 +49,22 @@ if (!function_exists('zigi_payment_popup')) {
 				<div class="second-step">
 					<form method="post" enctype="multipart/form-data" novalidate="" class="box has-advanced-upload">
 						<div class="box__input">
+							<svg class="box__icon" xmlns="http://www.w3.org/2000/svg" width="50" height="43" viewBox="0 0 50 43"><path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"/></svg>
 							<input type="file" name="files" id="file" class="box__file" accept=".png, .jpg, .jpeg, .gif">
-							<label for="file"><?php esc_html_e('Arrastra y suelta el archivo para subir', 'paga-con-zigi'); ?> <br /><br /> <?php esc_html_e('o', 'paga-con-zigi'); ?></label>
+							<label for="file"><strong><?php esc_html_e('Elige un archivo', 'paga-con-zigi'); ?></strong><span class="box__dragndrop"> <?php esc_html_e('o arrástralo aquí', 'paga-con-zigi'); ?></span>.</label>
 							<button type="submit" class="box__button"><?php esc_html_e('Seleccionar Archivo', 'paga-con-zigi'); ?></button>
 						</div>
 						<input type="hidden" name="ajax" value="1">
 					</form>
 					<div class="error"><?php esc_html_e('Por favor sube tu comprobante', 'paga-con-zigi'); ?></div>
-					<?php // phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Imagen estática del plugin, no requiere attachment ID ?>
-					<img src="<?php echo esc_url(plugins_url('/assets/loader.gif', __FILE__)); ?>" class="loader" alt="<?php esc_attr_e( 'Cargando...', 'paga-con-zigi' ); ?>"  width="25" height="25" loading="lazy" />
 
-					<input type="submit" name="final_order" class="finalized_order btn_submit" value="<?php echo esc_attr('Completar Compra', 'paga-con-zigi'); ?>">
+					<div class="submit-wrapper">
+						<?php // phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage -- Imagen estática del plugin, no requiere attachment ID ?>
+						<img src="<?php echo esc_url(plugins_url('/assets/loader.gif', __FILE__)); ?>" class="loader" alt="<?php esc_attr_e( 'Cargando...', 'paga-con-zigi' ); ?>"  width="25" height="25" loading="lazy" />
+						<input type="submit" name="final_order" class="finalized_order btn_submit" value="<?php echo esc_attr('Completar Compra', 'paga-con-zigi'); ?>">
+					</div>
 				</div>
-				<div class="zigi-footer" style="margin-top: 15px; font-size: 12px; color: #666;">
+				<div class="zigi-footer">
 					Respaldado por Banco Industrial
 				</div>
 			</div>
